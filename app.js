@@ -16,13 +16,14 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 
-// app.use(cors({
-//   allowedOrigins: [
-//     'http://127.0.0.1:3000/'
-//   ]
-// }))
+app.use(cors({
+  allowedOrigins: [
+    'http://127.0.0.1:3000/'
+  ], [
+    'http://127.0.0.1:8080/'
+  ]
+}))
 
-// app.use('/', require('./routes/secrets'))
 app.use('/secrets', require('./routes/secrets'))
 
 app.use('*', function(req, res, next) {

@@ -12,9 +12,10 @@ function HomeController($http, $stateParams, $state) {
     console.log('home controller');
   }
 
-  function secretAdd() {
-    $http.post('/home', {
-        text: vm.secret.secret
+  function secretAdd(secret) {
+    console.log('trying to add secret');
+    $http.post('/secrets', {
+        text: vm.secret.text
       })
       .then(function(response) {
         $state.go('itisdone')
