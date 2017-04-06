@@ -7,8 +7,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body.secret);
+  var theSecret = {
+    text: req.body.text
+  }
   knex('secret')
+    .insert(theSecret)
     .then(secrets => {
       console.log(secrets);
       res.json(secrets);
