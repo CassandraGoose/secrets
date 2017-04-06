@@ -4,7 +4,7 @@ angular
 
 function HomeController($http, $stateParams, $state) {
   const vm = this
-  vm.login = login
+  vm.secretAdd = secretAdd
 
   //base urL?
 
@@ -12,8 +12,8 @@ function HomeController($http, $stateParams, $state) {
     console.log('home controller');
   }
 
-  function login() {
-    $http.post(BaseURL + '/home', {
+  function secretAdd() {
+    $http.post('/home', {
         text: vm.secret.secret
       })
       .then(function(response) {

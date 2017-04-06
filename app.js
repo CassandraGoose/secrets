@@ -6,7 +6,6 @@ var cors = require('express-cors')
 const app = express()
 require('dotenv').config()
 
-var authMiddleware = require('./routes/middleware')
 
 if (process.env.NODE_ENV !== 'test') {
   const logger = require('morgan')
@@ -18,7 +17,6 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
-app.use(cookieParser(process.env.COOKIE_SECRET))
 
 // app.use(cors({
 //   allowedOrigins: [
@@ -26,7 +24,8 @@ app.use(cookieParser(process.env.COOKIE_SECRET))
 //   ]
 // }))
 
-app.use('/api', require('./routes/home'))
+// app.use('/', require('./routes/secrets'))
+app.use('/secrets', require('./routes/secrets'))
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {
