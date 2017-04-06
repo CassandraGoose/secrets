@@ -7,5 +7,8 @@
     }).component('what', {
       templateUrl: '/what.html',
       controller: "WhatController"
+    }).component('itisdone', {
+      templateUrl: '/itisdone.html',
+      controller: "ItIsDoneController"
     })
 }())

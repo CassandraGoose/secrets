@@ -17,6 +17,10 @@
         name: 'what',
         url: '/what',
         component: 'what'
+      }).state({
+        name: 'itisdone',
+        url: '/itisdone',
+        component: 'itisdone'
       })
     $urlRouterProvider.otherwise('/')
   }

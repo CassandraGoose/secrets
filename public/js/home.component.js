@@ -1,18 +1,18 @@
 angular
-.module("app")
+  .module("app")
   .controller("HomeController", HomeController)
 
-  function HomeController($http, $stateParams, $state) {
-    const vm = this
-    vm.login = login
+function HomeController($http, $stateParams, $state) {
+  const vm = this
+  vm.login = login
 
-      //base urL?
+  //base urL?
 
-    vm.$onInit = function() {
-      console.log('heyyyyyyybro');
-    }
+  vm.$onInit = function() {
+    console.log('home controller');
+  }
 
-    function login() {
+  function login() {
     $http.post(BaseURL + '/home', {
         text: vm.secret.secret
       })
@@ -20,4 +20,4 @@ angular
         $state.go('itisdone')
       })
   }
-  }
+}

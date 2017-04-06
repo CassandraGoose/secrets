@@ -1,12 +1,12 @@
 angular
-.module("app")
+  .module("app")
   .controller("WhatController", WhatController)
 
-  function WhatController($http, $stateParams, $state) {
-    const vm = this
-      //base urL?
+function WhatController($http, $stateParams, $state) {
+  const vm = this
+    //base urL?
 
-    vm.$onInit = function() {
-      console.log('heyyyyyyybro');
-    }
+  vm.$onInit = function() {
+    console.log('what controller');
   }
+}
