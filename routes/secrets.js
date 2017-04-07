@@ -4,9 +4,13 @@ const knex = require('../db')
 
 router.get('/', (req, res) => {
   console.log('fucking work');
+  res.status(200).json({
+    hello: 'what the fuck'
+  })
 })
 
 router.post('/', (req, res) => {
+  console.log(req.body.text)
   var theSecret = {
     text: req.body.text
   }
