@@ -6,10 +6,52 @@ html {
 }
 
 body {
-  font-family: 'Armata', sans-serif;
+  color: #cdcdcd;
+  font-family: unicorn, Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+    font-family: unicorn;
+    src: url(unicorn.ttf);
+    font-weight:400;
+}
 
+h1, h2, h3, h4, h5, h6, p {
+  color: #949496;
+}
+
+a {
+  color: #949496;
+}
+
+a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+.ink-navigation, ul.menu.black {
+  background-color: #1b1424 !important;
+}
+
+.navcolor {
+    color: #949496;
+}
+
+.ink-button {
+  background-color: #1b1424;
+  border-color: #1b1424;
+  color: #949496;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.ink-form input[type="text"]:focus {
+  border-color: ;
+}
+
+.ink-form input[type="text"] {
+  background-color: #e6e6e6;
+}
 
 @keyframes gradientBG {
     0%{background-position:0% 50%}
@@ -73,7 +115,7 @@ body {
 }
 
 .titlespace {
-  padding-top: .85em;
+  padding-top: .66em;
 }
 
 .rightspace {
