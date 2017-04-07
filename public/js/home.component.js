@@ -13,7 +13,7 @@ function HomeController($http, $stateParams, $state) {
 
   function secretAdd() {
     console.log(vm.secrets.text);
-    $http.post("http://127.0.0.1:3000/secrets", {
+    $http.post("http://thesecretkeeper.herokuapp.com/secrets", {
         text: vm.secrets.text
       })
       .then(function(response) {
