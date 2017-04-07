@@ -7,12 +7,10 @@ function HomeController($http, $stateParams, $state) {
   vm.secretAdd = secretAdd
 
   vm.$onInit = function() {
-    console.log('home controller');
   }
 
 
   function secretAdd() {
-    console.log(vm.secrets.text);
     $http.post("http://thesecretkeeper.herokuapp.com/secrets", {
         text: vm.secrets.text
       })

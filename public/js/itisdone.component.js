@@ -7,6 +7,5 @@ function ItIsDoneController($http, $stateParams, $state) {
     //base urL?
 
   vm.$onInit = function() {
-    console.log('itisidone controller');
   }
 }

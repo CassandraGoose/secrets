@@ -7,6 +7,5 @@ function WhatController($http, $stateParams, $state) {
     //base urL?
 
   vm.$onInit = function() {
-    console.log('what controller');
   }
 }
