@@ -5,7 +5,7 @@ const knex = require('../db')
 router.get('/', (req, res) => {
   console.log('fucking work');
   res.status(200).json({
-    hello: 'what the fuck'
+    hello: 'thanks for finding me.'
   })
 })
 
@@ -17,7 +17,6 @@ router.post('/', (req, res) => {
   knex('secret')
     .insert(theSecret)
     .then(secrets => {
-      console.log(secrets);
       res.json(secrets);
     })
 })
