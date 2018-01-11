@@ -11,7 +11,7 @@ function HomeController($http, $stateParams, $state) {
 
 
   function secretAdd() {
-    $http.post("http://thesecretkeeper.herokuapp.com/secrets", {
+    $http.post("https://thesecretkeeper.herokuapp.com/secrets", {
         text: vm.secrets.text
       })
       .then(function(response) {
