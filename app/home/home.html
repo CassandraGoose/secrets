@@ -4,16 +4,18 @@
     <div class="align-center">
       <p></p>
       </div>
+      <div ng-if="!$ctrl.error">
         <h2 class="above">i will store your secret and keep it safe.</h2>
         <form name="secretForm" autocomplete="off" class="ink-form sidepad above bottom-space all-80 push-center" novalidate>
           <div class="control-group all-100 small-100 tiny-100 align-center" ng-class="{ 'has-error': secretForm.$invalid }">
             <div class="control append-button" role="search">
               <span><input type="text" id="secret" name="secret" class="control" ng-minlength=5 placeholder="your secret here..." ng-model="$ctrl.secrets.text" required></span>
               <button class="ink-button" ng-click="$ctrl.secretAdd()" ng-disabled="secretForm.$invalid" type="submit">submit</button>
-              <span class="error" ng-show="secretForm.secret.$dirty && secretForm.secret.$invalid">
             </div>
           </div>
         </form>
+      </div>
+        <span class="error" ng-if="$ctrl.error">{{$ctrl.error}}<span>
         <div class="bottomsies"></div>
     </section>
 </main>

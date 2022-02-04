@@ -5,6 +5,7 @@ angular
 function HomeController($http, $stateParams, $state) {
   const vm = this;
   vm.secretAdd = secretAdd;
+  vm.error = '';
 
   function secretAdd() {
     if (vm.secrets.text) {
@@ -14,7 +15,7 @@ function HomeController($http, $stateParams, $state) {
         .then(function() {
           $state.go('complete');
         })
-        .catch((err) => console.error(err));
+        .catch(() => vm.error = 'something went wrong...Please try again later.');
     }
   }
 }
