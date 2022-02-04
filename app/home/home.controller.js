@@ -13,7 +13,8 @@ function HomeController($http, $stateParams, $state) {
         })
         .then(function() {
           $state.go('complete');
-        });
+        })
+        .catch((err) => console.error(err));
     }
   }
 }
