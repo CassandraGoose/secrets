@@ -8,6 +8,7 @@ html {
 body {
   color: #cdcdcd;
   font-family: unicorn, Helvetica, Arial, sans-serif;
+  min-width: 330px;
 }
 
 @font-face {
@@ -31,7 +32,7 @@ a:hover {
 }
 
 .ink-navigation, ul.menu.black {
-  background-color: #1b1424 !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .navcolor {
@@ -46,7 +47,7 @@ a:hover {
 }
 
 .ink-form input[type="text"]:focus {
-  border-color: ;
+  border-color: #22c297;
 }
 
 .ink-form input[type="text"] {
