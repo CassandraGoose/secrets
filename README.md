@@ -1,6 +1,8 @@
 # The Secret Keeper Front End
 ## Check it out @ https://secret-keeper.surge.sh/
 
+## The backend repo can be found [here](https://github.com/CassandraGoose/secrets-backend).
+
 #### The Secret Keeper is a simple app that allows users to input a secret and it will save that secret to a database
 #### This data isn't used for anything and isn't accessible by anyone but me (but I'm not looking...)
 
